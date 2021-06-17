@@ -1,11 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { } from "react";
 import {
   BrowserRouter,
   Route,
   Switch,
-  Link,
   NavLink,
-  useParams,
 } from "react-router-dom";
 import PasswordTablePage from "./Pages/PasswordTablePage";
 
@@ -14,12 +12,7 @@ import GreetingComponent from "./GreetingComponent";
 import { connect } from "react-redux";
 import { updateUser } from "./storage/user/actions";
 
-let defaultPasswordList = [
-  { id: 123, password: "123", website: "BNCC", username: "email@gmail.com" },
-];
-
 function App(props) {
-  const [passwordList, setPasswordList] = useState(defaultPasswordList);
   return (
     <>
       {props.user.name}
